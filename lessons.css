@@ -1,0 +1,161 @@
+@font-face {
+    font-family: Arima-bold;
+    src: url("./fonts/static/Arima-Bold.ttf");
+}
+
+@font-face {
+    font-family: Arima-regular;
+    src: url("./fonts/static/Arima-Regular.ttf");
+}
+
+@font-face {
+    font-family: Arima-medium;
+    src: url("./fonts/static/Arima-Medium.ttf");
+}
+
+h1, h2 {
+    font-family: Arima-bold;
+}
+
+nav {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: start !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arima-regular;
+}
+
+.circled {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    z-index: -1;
+    border-radius: 100%;
+    opacity: 0.3;
+}
+
+.start {
+    left: 75%;
+    top: 10%;
+   width: 50px;
+    height: 50px; 
+    background-color: rgb(0, 102, 255);
+}
+
+.front {
+    background-color: plum;
+}
+
+.rightend {
+    background-color: rgb(243, 7, 208);
+    left: 90%;
+    top: 40%;
+}
+
+.leftend {
+    background-color: rgb(243, 86, 7);
+    left: 2%;
+    top: 75%;
+}
+
+
+.navbar-brand {
+    width: 140px;
+    height: 60px;
+    position: relative;
+    right: 12px;
+    bottom: 10px;
+    padding: 15px;
+    color: white;
+    border-bottom-right-radius: 30px;  
+    background-color: orangered;  
+    font-size: 30px !important;
+    text-align: center;
+}
+
+.user {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: orange;
+}
+
+.user img {
+    width: 100%;
+    height: 100%;
+}
+
+#list {
+    list-style-type: none;
+    width: 20%;
+    display: flex;
+    margin: 0;
+    background-color: white;
+    /* justify-content: center; */
+}
+
+#list li {
+    width: 100px;
+    font-size: 30px;
+    color: orangered;
+    text-align: center;
+    position: relative;
+    right: 20px;
+    top: 2px;
+}
+
+.learn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lessons {
+    border: solid 1px orange;
+    border-radius: 5px;
+    background-color: rgb(255, 249, 240);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 1px 0 rgba(251, 231, 215, 0.927), 0 1px 5px 0 rgba(248, 223, 202, 0.71);
+    transition: ease-in 0.3s;
+}
+
+.lessons:hover {
+    scale: 1.1;
+}
+
+.lessons a {
+    color: white;
+    width: 90%;
+}
+
+.lessons .orange {
+    background-color: orange;
+    box-shadow: 2px 7px rgb(216, 142, 4);
+
+}
+
+.lessons .purple {
+    background-color: purple;
+    box-shadow: 2px 7px rgb(103, 1, 103);
+}
+
+.lessons .green {
+    background-color: green;
+    box-shadow: 2px 7px rgb(1, 105, 1);
+}
+
+.lessons img {
+    width: 220px;
+    height: 250px;
+}

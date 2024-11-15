@@ -1,0 +1,162 @@
+/* Body background with subtle animated gradient */
+body {
+  overflow: hidden;
+  background: linear-gradient(120deg, #ffdde1, #ee9ca7, #b993d6, #8ca6db);
+  background-size: 200% 200%;
+  animation: backgroundShift 15s ease infinite;
+}
+
+#list {
+  border-radius: 5px;
+}
+
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Bubble styling */
+.bubble {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 1em;
+  position: absolute;
+  bottom: 0;
+  animation: float 5s ease-in-out infinite;
+  background-color: purple;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bubble.orange {
+  background: radial-gradient(circle at 30% 30%, #ffae5c, #e07428);
+  box-shadow: 0 10px 20px rgba(224, 116, 40, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.bubble.purple {
+  background: radial-gradient(circle at 30% 30%, #b566ff, #6f2dbd);
+  box-shadow: 0 10px 20px rgba(111, 45, 189, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Enhanced hover effect with glow */
+.bubble:hover {
+  transform: scale(1.2);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25), 0 0 15px rgba(255, 255, 255, 0.3), 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Glow highlights for bubbles */
+.bubble.orange::before, .bubble.orange::after, .bubble.purple::before, .bubble.purple::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bubble.orange::before, .bubble.purple::before {
+  width: 40px;
+  height: 40px;
+  top: 5px;
+  left: 5px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(224, 224, 224, 0.2));
+}
+
+.bubble.orange::after, .bubble.purple::after {
+  width: 15px;
+  height: 15px;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.center-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: bounce 2s infinite;
+}
+
+.center-icon img {
+  width: 300px;
+  height: auto;
+}
+
+/* Animation for floating effect with a slight wobble */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-30px) rotate(2deg); }
+  50% { transform: translateY(-60px) rotate(-2deg); }
+  75% { transform: translateY(-30px) rotate(1deg); }
+}
+
+/* Floating text effect on fortune cookie */
+.fortune-cookie {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  overflow: hidden; /* Ensure no content goes out of bounds */
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Light border for liquid feel */
+}
+
+.fortune-cookie h3 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.fortune-cookie button {
+  background-color: #ff6f61; /* Soft coral color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fortune-cookie button:hover {
+  background-color: #ff4e3a; /* Darken on hover */
+}
+
+.fortune-cookie:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
+  animation: drop 1.5s ease-in-out infinite;
+}
+
+@keyframes drop {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+  100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+}

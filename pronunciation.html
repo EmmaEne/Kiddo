@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronunciation</title>
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lessons.css">
+    <link rel="stylesheet" href="pronunciation.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <h2 class="navbar-brand" href="#">Kiddo</h2>
+          <ul id="list">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-rocket"></i></li>
+            <li><i class="fa fa-list"></i></li>
+          </ul>
+          <div class="user">
+            <img src="images/boy.png" class="user">
+          </div>
+        </div>
+    </nav>
+
+    <section class="bubbles" id="bubblesContainer"></section>
+
+    <div class="center-icon">
+      <img src="images/purple_bird-removebg-preview.png" id="parrot" alt="Parrot Icon">
+    </div>  
+
+    <!-- Hidden fortune cookie message div -->
+    <div class="fortune-cookie" id="fortuneCookie">
+        <h3 id="sentenceDisplay"></h3>
+        <button onclick="closeCookie()">Close</button>
+    </div>
+
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="pronunciation.js"></script>
+</body>
+</html>

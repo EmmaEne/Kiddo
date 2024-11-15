@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hero Section with Sliding Animation</title>
+        <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <div class="circled start"></div>
+        <div class="circled front"></div>
+        <div class="circled rightend"></div>
+        <div class="circled middle"></div>
+        <div class="circled middleTwo"></div>
+        <div class="circled leftend"></div>
+        <div class="circled end"></div>
+        
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <h2 class="navbar-brand" href="#">Kiddo</h2>
+            </div>
+        </nav>
+        <section class="hero-section">
+            <div class="container-fluid">
+                <div class="slider">
+                    <div class="slide">
+                        <div class="text">
+                            <h1>Tired of your child looking this <span class="coloured">stressed?</span></h1>
+                            <h4>Learn anytime, anywhere, tailored education at your child's pace</h4>
+                        </div>
+                        <div class="container img">
+                            <img src="./images/Student stress-pana.svg" alt="Image 1" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="text">
+                            <h1><span class="coloured">Say goodbye</span> to school stress</h1>
+                            <h4>Our app provides a balanced approach to learning that fits your kids.</h4>
+                        </div>
+                        <div class="container img">
+                            <img src="./images/soar.png" alt="Image 1" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="text">
+                            <h1>With <span id="brand-name">Kiddo</span>, education is made <span class="coloured">easy,</span></h1>
+                            <h4>Interactive, fun and effective for young learners.</h4>
+                            <div class="container mycont">
+                                <a href="./lessons.html" class="btn button" id="loadButton">Get started</a>
+                                <div class="progress-container hidden">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container img">
+                            <img src="./images/happiness.png" alt="Image 1" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="index.js"></script>
+    </body>
+</html>
